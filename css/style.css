@@ -1,6 +1,38 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: aquamarine;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+
+nav{
+    text-align: center;
+}
+
+li{
+    display: inline;
+    padding: 10px;
+    list-style: none;
+    margin: 10px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a:hover{
+    background-color: aquamarine;
 }
 
 .wrapper{
@@ -17,15 +49,97 @@
 }
 
 .card{
-    width: 30%;
-    display: block;
+    width: 100%;
     margin: 10px;
 }
 
 .card-image{
-    width: 100%;
     border: 2px solid black;
     margin: 10px;
     border-radius: 5px;
-    margin-left: 300px;
+    object-fit: cover;
+}
+
+/*Categorias*/
+
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.categoria-1 .card-image{
+    width: 325px;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.categoria-1 h1{
+    color: black;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    padding: 10px;
+    margin: 20px;
+}
+
+.informacion{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.informacion>p:first-child{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+.informacion .precio span{
+    font-size: 17px;
+    font-weight: 300;
+}
+.informacion button{
+    background-color: red;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.informacion button:hover{
+    background-color: lightcoral;
+}
+
+.compras{
+    border-bottom: 2px solid black;
+    box-shadow: 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    height: 70px;
+    top: 0;
+    width: 100%;
+    background-color: lightblue;
+    margin-bottom: 20px;
+}
+
+.carrito{
+    filter: invert(100%);
+    width: 40px;
+    height: auto;
 }
